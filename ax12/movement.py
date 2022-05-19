@@ -1,5 +1,5 @@
-from .Ax12 import Ax12
 import time
+from ax12 import Ax12
 
 STANDING_POS = 300
 
@@ -28,7 +28,7 @@ def moveServos(servoIds, pos):
         moveServo(id, pos)
 
 
-def connectServos():
+def connect():
     # e.g 'COM3' windows or '/dev/ttyUSB0' for Linux
     Ax12.DEVICENAME = 'COM15'
 
@@ -129,24 +129,3 @@ def flip(servos):
     moveServo(servos, 5, 724)
     moveServo(servos, 7, 724)
     time.sleep(0.5)
-
-
-def main():
-
-    servos = connectServos()
-
-    sit(servos)
-    time.sleep(1)
-    stand(servos)
-    time.sleep(1)
-    # flip(servos)
-    rotate(servos)
-    # time.sleep(1)
-    # walk(servos)
-    # sit(servos)
-
-    Ax12.disconnect()
-
-
-if __name__ == "__main__":
-    main()

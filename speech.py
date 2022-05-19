@@ -5,16 +5,9 @@ Created on Wed May 18 12:45:29 2022
 @author: Administrator
 """
 
-from __future__ import print_function
-import datetime
-import pickle
-import os
-import time
 import pyttsx3
 import speech_recognition as sr
-import pytz
-import subprocess
-from ax_12.movement import *
+from ax12.movement import flip, rotate, walk, sit, stand, connect
 
 
 WAKE = "tiger"
@@ -44,7 +37,7 @@ def get_audio():
 
 def main():
 
-    servos = connectServos()
+    servos = connect()
 
     while True:
         print("\nSay 'tiger' to wake . . .")

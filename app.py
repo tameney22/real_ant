@@ -1,11 +1,10 @@
-from ax_12.movement import *
+from ax12.movement import sit, stand, rotate, flip, walk, connect
 from flask import Flask, jsonify, redirect, render_template, request
-
 
 app = Flask(__name__)
 
 # Initialize servos
-servos = connectServos()
+servos = connect()
 
 
 @app.get("/test")

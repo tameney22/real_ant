@@ -1,4 +1,4 @@
-from ax_12.Ax12 import Ax12
+from ax12 import Ax12
 
 
 MOVING_SPEED = 300
