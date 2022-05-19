@@ -1,7 +1,8 @@
 #!/usr/bin/env python
 # -*- coding: utf-8 -*-
 
-from dynamixel_sdk import *  # Uses Dynamixel SDK library
+#from dynamixel_sdk import *  
+import  dynamixel_sdk as dsdk
 
 # Control table ADDRess for AX-12
 # EEPROM REGISTER ADDRESSES - Permanently stored in memory once changed
@@ -308,7 +309,7 @@ class Ax12:
 
     @classmethod
     def open_port(cls):
-        cls.portHandler = PortHandler(cls.DEVICENAME)
+        cls.portHandler = dsdk.PortHandler(cls.DEVICENAME)
         if cls.portHandler.openPort():
             print("Succeeded to open the port")
         else:
@@ -329,7 +330,7 @@ class Ax12:
     def connect(cls):
         cls.open_port()
         cls.set_baudrate()
-        cls.packetHandler = PacketHandler(cls.PROTOCOL_VERSION)
+        cls.packetHandler = dsdk.PacketHandler(cls.PROTOCOL_VERSION)
 
     @classmethod
     def disconnect(cls):
@@ -339,7 +340,7 @@ class Ax12:
 
     @staticmethod
     def check_error(comm_result, dxl_err):
-        if comm_result != COMM_SUCCESS:
+        if comm_result != dsdk.COMM_SUCCESS:
             print("%s" % Ax12.packetHandler.getTxRxResult(comm_result))
         elif dxl_err != 0:
             print("%s" % Ax12.packetHandler.getRxPacketError(dxl_err))
