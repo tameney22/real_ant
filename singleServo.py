@@ -1,6 +1,4 @@
 """
-Author: Yoseph Tamene
-
 Short script to display a TKinter window to control the AX-12A's speed and position.
 
 Inspired by: https://www.youtube.com/watch?v=c92E_YC9uZQ
@@ -8,7 +6,7 @@ Inspired by: https://www.youtube.com/watch?v=c92E_YC9uZQ
 """
 
 
-from Ax12 import Ax12
+from ax12 import Ax12
 import tkinter as tk
 
 

@@ -1,8 +1,7 @@
-# -*- coding: utf-8 -*-
 """
-Created on Wed May 18 12:45:29 2022
-
-@author: Administrator
+UNDER DEVELOPMENT
+This script allows you to control the ant using voice commands. 
+It listens for the wake word and awaits a command.
 """
 
 import pyttsx3

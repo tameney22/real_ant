@@ -1,8 +1,11 @@
 #!/usr/bin/env python
-# -*- coding: utf-8 -*-
 
-#from dynamixel_sdk import *  
-import  dynamixel_sdk as dsdk
+# -*- coding: utf-8 -*-
+"""
+This code was copied and minimally modified from the repository below maintained by Aary Kieu (qrbx on YouTube).
+https://github.com/aakieu/ax12_control
+"""
+import dynamixel_sdk as dsdk
 
 # Control table ADDRess for AX-12
 # EEPROM REGISTER ADDRESSES - Permanently stored in memory once changed

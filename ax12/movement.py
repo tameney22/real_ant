@@ -47,10 +47,6 @@ def connect():
     return servos
 
 
-def testFunc():
-    print("TEST IMPORT WORKED")
-
-
 def stand(servos):
     moveInner(servos, 512)
     moveOuter(servos, STANDING_POS)
