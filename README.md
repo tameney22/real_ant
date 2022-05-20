@@ -1,5 +1,7 @@
 # Real Ant
 
+![Assembled Ant](/images/angle.jpg)
+
 Resources for working with the Real Ant project minus the actual reinforcement learning. This repository consists of code that allows you to interact with any number of [Dynamixel AX-12A](https://www.robotis.us/dynamixel-ax-12a/) servos.
 
 ## Code Description
@@ -14,7 +16,8 @@ The original class can be [found here](https://github.com/aakieu/ax12_control), 
 
 This module consists of functions for moving the collection of servos on the ant. These utility functions can be used to move a single servo or a collection of servos to perform an action like sitting or standing.
 
-**IMPORTANT:** The servo ids should be configured to be numbers between 1-8 and arranged in a specific order for the various movements to work out of the box.
+**IMPORTANT:** The servo ids should be configured to be numbers between 1-8 and arranged in a specific order for the various movements to work out of the box. Look at the image below:
+![Ant ID Configuration](/images/id_config.jpg)
 
 ### `changeID.py`
 
@@ -41,3 +44,5 @@ This is a simple Flask server that serves a webpage on your local network that a
 - [Dynamixel SDK Docs](https://emanual.robotis.com/docs/en/software/dynamixel/dynamixel_sdk/overview/): the software development kit to interact with the servos using the language of your choice (in this case _Python_).
 
 - [Dynamixel AX-12A E-Manual](https://emanual.robotis.com/docs/en/dxl/ax/ax-12a/): documentation about the physical servos, including information about the different values and their registers.
+
+![Ant ID Configuration](/images/front.jpg)
